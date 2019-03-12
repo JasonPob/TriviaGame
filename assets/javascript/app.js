@@ -1,6 +1,6 @@
 //variables
 var clockRunning = false;
-var time = 120;
+var time = 31;
 var intervalId;
 var correctAnswers = 0;
 var inncorrectAnswers = 0;
