@@ -1,6 +1,6 @@
 //variables
 var clockRunning = false;
-var time = 31;
+var time = 15;
 var intervalId;
 var correctAnswers = 0;
 var inncorrectAnswers = 0;
@@ -36,9 +36,10 @@ function count() {
             if (questions[i] === "Incorrect") {
                 inncorrectAnswers++
             }
-            else
-                unanswered++
+            
+                
         }
+ var unanswered =  questions.length - (correctAnswers+inncorrectAnswers);
         clearInterval(intervalId);
         $("#timer").html("Game Over!");
         $("#timer").append("<br> Results: ");
@@ -46,6 +47,7 @@ function count() {
         $("#timer").append("<br> Incorrect Answers: " + inncorrectAnswers);
         $("#timer").append("<br> Unanswered : " + unanswered);
     }
+
     else $("#timer").text("Time Remaining: " + time + " Seconds");
 
 }
